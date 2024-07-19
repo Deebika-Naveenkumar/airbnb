@@ -30,7 +30,7 @@ Utilize Power BI to create a comprehensive dashboard that presents key insights 
 
 Dashboard Pic
 
-![Dashboard Image](https://github.com/user-attachments/assets/8b1cbf36-4916-4526-a94d-a825275fb6b3)
+![Dashboard Image](https://github.com/user-attachments/assets/8f313157-9f71-4270-be8b-b3de445109b6)
 
 
 
