@@ -257,17 +257,23 @@ elif selected == "Data Analysis":
     market_list = df["market"][df["country"] == selected_country].unique()
     with col2:
         selected_market = st.selectbox("Select a market:", market_list, key=2)
-    neighbourhood_list = sorted(list(df["host_neighbourhood"][(df["country"] == selected_country) & (df["market"] == selected_market)].unique()))
+    neighbourhood_list = sorted(list(df["suburb"][(df["country"] == selected_country) & (df["market"] == selected_market)].unique()))
     with col3:
         selected_neighbourhood = st.selectbox("Select a neighbourhood:", neighbourhood_list)
 
-    filtered_df = df[(df["country"] == selected_country) & (df["market"] == selected_market) & (df["host_neighbourhood"] == selected_neighbourhood)]
+    filtered_df = df[(df["country"] == selected_country) & (df["market"] == selected_market) & (df["suburb"] == selected_neighbourhood)]
+
+    # Calculate average price for each room type and property type
+    avg_price_df = filtered_df.groupby(['property_type', 'room_type'])['price'].mean().reset_index()
+
+    # Create bar chart
     fig_bar = px.bar(
-        filtered_df,
+        avg_price_df,
         x="property_type", y="price",
         title="PROPERTY AND ROOM PRICE ANALYSIS BY NEIGHBOURHOOD",
         color="room_type", barmode="group",
-        labels={'property_type': 'Property Type', 'price': 'Price'}
+        labels={'property_type': 'Property Type', 'price': 'Average Price'}
     )
     fig_bar.update_layout(title_x=0.4)
+
     st.plotly_chart(fig_bar)
