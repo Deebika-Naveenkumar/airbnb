@@ -36,5 +36,7 @@ Dashboard Pic
 
 ![Dashboard Image](https://github.com/user-attachments/assets/8f313157-9f71-4270-be8b-b3de445109b6)
 
+LinkedIn: https://www.linkedin.com/posts/activity-7224836393485619201-Q3Bu/?utm_source=share&utm_medium=member_desktop
+
 
 
