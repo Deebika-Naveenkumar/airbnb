@@ -148,7 +148,7 @@ elif selected == "Data Analysis":
         hover_name='host_neighbourhood',
         hover_data={'price': True, 'review_scores': True, 'host_name': True},
         title=f'LISTINGS IN {selected_market.upper()}, {selected_country.upper()}',
-        labels={'host_neighbourhood': 'Host Neighbourhood', 'price': 'Mean Price'}
+        labels={'host_neighbourhood': 'Host Neighbourhood', 'price': 'Price'}
     )
     fig_scatter.update_layout(title_x=0.4)
     st.plotly_chart(fig_scatter)
