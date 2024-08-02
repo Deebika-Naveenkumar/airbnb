@@ -199,7 +199,7 @@ elif selected == "Data Analysis":
             x="room_type", y="price",
             title=title,
             color="bed_type", barmode="group",
-            labels={'room_type': 'Room Type', 'price': 'Price'}
+            labels={'room_type': 'Room Type', 'price': 'Average Price'}
         )
         fig.update_layout(title_x=0.3)
         return fig
